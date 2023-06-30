@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Listeners Example</title>
+</head>
+<body>
+  <h1>Event Listeners Example</h1>
+
+  <button id="myButton">Click Me</button>
+
+  <script>
+    const button = document.getElementById('myButton');
+
+    // Event listener using a named function
+    function handleClick() {
+      console.log('Button clicked!');
+    }
+
+    button.addEventListener('click', handleClick);
+
+    // Event listener using an anonymous function
+    button.addEventListener('mouseover', function() {
+      button.textContent = 'Mouse Over';
+    });
+
+    // Event listener using an arrow function
+    button.addEventListener('mouseout', () => {
+      button.textContent = 'Click Me';
+    });
+  </script>
+</body>
+</html>
