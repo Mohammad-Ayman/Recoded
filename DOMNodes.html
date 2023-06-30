@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+  <h1>DOM Manipulation Example</h1>
+
+  <div id="container"></div>
+
+  <script>
+    const paragraph = document.createElement('p');
+    paragraph.textContent = 'This is a dynamically created paragraph.';
+
+    const container = document.getElementById('container');
+    container.appendChild(paragraph);
+
+    paragraph.innerHTML += ' <strong>It has been updated!</strong>';
+
+    paragraph.style.color = 'red';
+
+    const button = document.createElement('button');
+    button.textContent = 'Click me';
+
+    button.addEventListener('click', function() {
+      container.removeChild(paragraph);
+    });
+
+    container.appendChild(button);
+  </script>
+</body>
+</html>
